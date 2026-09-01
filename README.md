@@ -11,6 +11,17 @@ The tool drives the installed `git` executable directly — no provider APIs, no
 Python Git reimplementation — so it works with GitHub, GitLab, self-hosted
 servers, and plain Git remotes alike.
 
+## Example
+
+Git's own history, visualised by this tool:
+
+<p align="center">
+  <img src="docs/git-history-of-git.png" alt="Radial history poster of the Git repository" width="600">
+</p>
+
+The PNG above is a preview; the crisp, self-contained
+[SVG version](docs/git-history-of-git.svg) is the canonical output.
+
 ## Installation
 
 Requires [`uv`](https://docs.astral.sh/uv/) and a `git` executable on your
