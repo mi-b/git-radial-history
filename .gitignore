@@ -1,0 +1,19 @@
+# Byte-compiled / optimised
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# uv / venv
+.venv/
+
+# Testing
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Generated output
+output/
+!tests/fixtures/**/*.svg
