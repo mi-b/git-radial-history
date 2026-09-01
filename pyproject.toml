@@ -1,0 +1,54 @@
+[project]
+name = "git-radial-history"
+version = "0.1.0"
+description = "Offline radial history poster generator for Git repositories"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { file = "LICENSE.md" }
+authors = [{ name = "git-radial-history contributors" }]
+keywords = ["git", "visualisation", "svg", "poster", "history"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Version Control :: Git",
+]
+dependencies = [
+    "resvg-py",
+    "platformdirs",
+]
+
+[project.urls]
+Homepage = "https://jpalmer.dev/2021/03/visualizing-the-change-history-of-the-git-repository/"
+
+[project.scripts]
+git-radial-history = "git_radial_history.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+    "ty",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/git_radial_history"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "C4"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ty.rules]
